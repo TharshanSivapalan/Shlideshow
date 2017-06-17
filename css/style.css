@@ -20,3 +20,12 @@ body{
 	float: left;
 	display: absolute;
 }
+.bgSizeCover {
+  	margin:0;
+  	padding:0;
+	float: left;
+ 	height: 170px;
+  	width: 300px;
+  	background: no-repeat center;
+  	background-size: cover;
+}

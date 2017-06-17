@@ -16,12 +16,13 @@
 if($(p_error_message).hide()){
 
 	$(div_rail).show();	
-	
+	var count=0;
 	$.getJSON(url_json, function(json){
 		$(div_rail).width(300*json.length);
 		$("div#titles").width(300*json.length);
 		$.each( json, function( key, val ) {
-			$(div_rail).append("<img class='img' src='" + val.url + "' data-title='" + val.title + "' style='width:300px; height:170;'>");
+			$(div_rail).append("<div class='bgSizeCover' id='img" + count + "' style='background-image: url(" + val.url + ");' ></div>");
+			count++;
 		});
 	    $("div#title").html($("#rail img:first").attr("data-title"));
 	});
@@ -52,6 +53,7 @@ if($(p_error_message).hide()){
 			pauseCarousel = true;
 			$("#pause").html('Reprendre');
 			$("#pause").attr("data-value", "reprendre");	
+			$("#pause").attr("class", "fa fa-play");	
 		}
 	});
 	$("#next").click(function(){
@@ -62,6 +64,7 @@ if($(p_error_message).hide()){
 			pauseCarousel = true;
 			$("#pause").html('Reprendre');
 			$("#pause").attr("data-value", "reprendre");	
+			$("#pause").attr("class", "fa fa-play");	
 		}
 	});
 	$("#pause").click(function(){
@@ -69,9 +72,11 @@ if($(p_error_message).hide()){
 			pauseCarousel = true;
 			$(this).html("Reprendre");
 			$(this).attr("data-value", "reprendre");
+			$(this).attr("class", "fa fa-play");
 		}else{
 			pauseCarousel = false;
 			$(this).attr("data-value", "pause");
+			$(this).attr("class", "fa fa-pause");
 			$(this).html("Pause");
 		}
 	});
@@ -79,13 +84,13 @@ if($(p_error_message).hide()){
 	$( function() {
     $( "#slideshow" ).resizable({
       alsoResize: "#rail",
-      alsoResize: ".img",
+      alsoResize: ".bgSizeCover",
       aspectRatio: 16 / 9,
       start: function(){
       	pauseSlide();
       },
       stop: function(){
-      	$("#rail").css('width', $('.img').width() * $('img').length);
+      	$("#rail").css('width', $('.bgSizeCover').width() * $('.bgSizeCover').length);
       }
     });
   } );
@@ -94,6 +99,7 @@ if($(p_error_message).hide()){
 		pauseCarousel = true;
 		$("#pause").html("Reprendre");
 		$("#pause").attr("data-value", "reprendre");
+		$("#pause").attr("class", "fa fa-play");
 	};
 
 	function previousImage(){
@@ -105,14 +111,14 @@ if($(p_error_message).hide()){
 	    $( "div#title" ).toggle( "clip" );
 	}
 	function nextImage() {
-	    $("#rail").animate({"margin-left":"-" + $('.img').css('width')}, 2000, changeFirstImg);
+	    $("#rail").animate({"margin-left":"-" + $('.bgSizeCover').css('width')}, 2000, changeFirstImg);
 	    $( "div#title" ).toggle( "clip" );
 	}
 
 	function changeFirstImg() {
-	    $("#rail img:last").after($("#rail img:first"));
-	    $('title').html($('img:first').attr("data-title"));
-   	    $("div#title").html($("#rail img:first").attr("data-title"));
+	    $("#rail .bgSizeCover:last").after($("#rail .bgSizeCover:first"));
+	    $('title').html($('.bgSizeCover:first').attr("data-title"));
+   	    $("div#title").html($("#rail .bgSizeCover:first").attr("data-title"));
    	    $( "div#title" ).toggle( "clip" );
 	    $("#rail").css('margin-left', '0px');
 	    $("#next").prop('disabled', false);
@@ -120,9 +126,9 @@ if($(p_error_message).hide()){
 	}
 
 	function reverseFirstImg(){
-	    $("#rail").css('margin-left', '-' + $('.img').css('width'));
-		$("#rail img:first").before($("#rail img:last"));
-   	    $("div#title").html($("#rail img:first").attr("data-title"));
+	    $("#rail").css('margin-left', '-' + $('.bgSizeCover').css('width'));
+		$("#rail .bgSizeCover:first").before($("#rail .bgSizeCover:last"));
+   	    $("div#title").html($("#rail .bgSizeCover:first").attr("data-title"));
    	    $("div#title").toggle("clip");
 	}
 
