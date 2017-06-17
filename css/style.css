@@ -1,0 +1,22 @@
+body{
+}
+
+#rail{
+	display: block;
+	float: left;
+}
+#titles{
+	display: relative;
+	width: 1200px;
+	float: left;
+}
+#slideshow{
+	width:300px;
+	overflow: hidden;
+	border: 1px solid black;
+}
+.image_title{
+	width: 300px;
+	float: left;
+	display: absolute;
+}
