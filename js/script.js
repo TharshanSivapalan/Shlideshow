@@ -51,8 +51,8 @@ if($(p_error_message).hide()){
 		    reverseFirstImg();
 			previousImage();
 			pauseCarousel = true;
-			$("#pause").html('Reprendre');
-			$("#pause").attr("data-value", "reprendre");	
+			//$("#pause").html('Reprendre');
+			//$("#pause").attr("data-value", "reprendre");	
 			$("#pause").attr("class", "fa fa-play");	
 		}
 	});
@@ -62,7 +62,7 @@ if($(p_error_message).hide()){
 			$("#back").prop('disabled', true);
 			nextImage();
 			pauseCarousel = true;
-			$("#pause").html('Reprendre');
+			//$("#pause").html('Reprendre');
 			$("#pause").attr("data-value", "reprendre");	
 			$("#pause").attr("class", "fa fa-play");	
 		}
@@ -70,20 +70,26 @@ if($(p_error_message).hide()){
 	$("#pause").click(function(){
 		if($(this).attr("data-value") == "pause"){
 			pauseCarousel = true;
-			$(this).html("Reprendre");
+			//$(this).html("Reprendre");
 			$(this).attr("data-value", "reprendre");
 			$(this).attr("class", "fa fa-play");
 		}else{
 			pauseCarousel = false;
 			$(this).attr("data-value", "pause");
 			$(this).attr("class", "fa fa-pause");
-			$(this).html("Pause");
+			//$(this).html("Pause");
 		}
 	});
 
 	$( function() {
     $( "#slideshow" ).resizable({
+
       alsoResize: "#rail",
+      
+      alsoResize: "#back",
+      alsoResize: "#pause",
+      alsoResize: "#next",
+      
       alsoResize: ".bgSizeCover",
       aspectRatio: 16 / 9,
       start: function(){
@@ -97,7 +103,7 @@ if($(p_error_message).hide()){
 
 	function pauseSlide(){
 		pauseCarousel = true;
-		$("#pause").html("Reprendre");
+		//$("#pause").html("Reprendre");
 		$("#pause").attr("data-value", "reprendre");
 		$("#pause").attr("class", "fa fa-play");
 	};

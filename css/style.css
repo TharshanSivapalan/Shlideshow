@@ -29,3 +29,25 @@ body{
   	background: no-repeat center;
   	background-size: cover;
 }
+
+#back{
+	position: absolute;
+	bottom: 100px;
+	left: 0px;
+}
+
+#pause{
+	position: absolute;
+	bottom: 100px;
+	left:150px;
+	right:300px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#next{
+	position: absolute;
+	bottom: 100px;
+	right: 0px;
+
+}
