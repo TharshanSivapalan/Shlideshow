@@ -7,33 +7,28 @@
 	<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 	<link rel="stylesheet" href="http://jqueryui.com/resources/demos/style.css">
 	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
 </head>
 <body>
+	<div id="timeline" data-value="next"></div>
 	<div id="slideshow">
-		<p class="error-message">JS est désactivé</p>
+			<span id="pause" class="fa fa-pause" data-value="pause"></span>
+		<p id="error-message">JS est désactivé</p>
 		<div id="rail">
-		
-		<span id="back" class="fa fa-chevron-left fa-4x"></span>
-		
-		<span id="pause" class="fa fa-pause fa-4x" data-value="pause"></span>
-		
-		<span id="next" class="fa fa-chevron-right fa-4x"></span>
-		
-
+			<p id="internet-message">Veuillez vérifier votre connexion internet</p>
+			<span id="back" class="fa fa-chevron-left"></span>
+			<span id="next" class="fa fa-chevron-right"></span>
 		</div>
 	</div>
-		<!--<button id="back" class="fa fa-chevron-left">Back</button>
-		<button id="pause" class="fa fa-pause" data-value="pause">Pause</button>
-		<button id="next" class="fa fa-chevron-right">Next</button>-->
 		<div id="title">
 		</div>
-		<div id="test"></div>
+		<div id="desc"></div>
 
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<script src="https://rawgit.com/jeresig/jquery.hotkeys/master/jquery.hotkeys.js"></script>
 	<script src="js/script.js"></script>
+	<script src="js/jquery.pause.min.js"></script>
 </body>
 </html>

@@ -7,11 +7,15 @@ body{
 }
 #titles{
 	display: relative;
-	width: 1200px;
+	width: 200px;
+	float: left;
+}
+#desc{
+	display: relative;
+	width: 200px;
 	float: left;
 }
 #slideshow{
-	width:300px;
 	overflow: hidden;
 	border: 1px solid black;
 }
@@ -24,30 +28,41 @@ body{
   	margin:0;
   	padding:0;
 	float: left;
- 	height: 170px;
-  	width: 300px;
+ 	height: 340px;
+  	width: 600px;
   	background: no-repeat center;
   	background-size: cover;
 }
+p#internet-message{
+	visibility: hidden;
+}
+#timeline {
+	position: absolute;
+	background-color: red;
+	width: 100%;
+	top: 0px;
+	left: 0px;
+	height: 2px;
+}	
 
 #back{
 	position: absolute;
-	bottom: 100px;
+	bottom: 50%;
 	left: 0px;
 }
 
 #pause{
 	position: absolute;
-	bottom: 100px;
-	left:150px;
-	right:300px;
+	bottom: 50%;
+	left: 50%;
+	right: 50%;
 	margin-right: auto;
 	margin-left: auto;
 }
 
 #next{
 	position: absolute;
-	bottom: 100px;
+	bottom: 50%;
 	right: 0px;
 
 }
