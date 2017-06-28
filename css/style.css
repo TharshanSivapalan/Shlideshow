@@ -1,32 +1,47 @@
-body{
-	background-color: black;
-	background-image: url(images/fonds.png);
-
+html{
+	background:white;
+	
 }
+
+h1,h2{
+	text-align: center;
+}
+
+body, footer{
+
+	margin: 100px;
+	padding: 100px;
+	background:grey;
+}
+
 
 #rail{
 	display: block;
 	float: left;
 }
-#titles{
-	display: relative;
-	width: 200px;
-	float: left;
+#title{
+
+	text-align: center;
 }
 #desc{
-	display: relative;
-	width: 200px;
-	float: left;
+
+	text-align: center;
+
 }
 #slideshow{
-	overflow: hidden;
-	border: 1px solid black;
+	
+	position: relative;
+    overflow: hidden;
+    margin:auto;
+  	padding:auto;
+	
+	border-radius: 5px 10px 0 5px ;
 }
-.image_title{
+/*.image_title{
 	width: 300px;
 	float: left;
 	display: absolute;
-}
+}*/
 .bgSizeCover {
   	margin:0;
   	padding:0;
@@ -35,6 +50,8 @@ body{
   	width: 600px;
   	background: no-repeat center;
   	background-size: cover;
+
+
 }
 p#internet-message{
 	visibility: hidden;

@@ -134,6 +134,7 @@ if($(p_error_message).hide()){
 	    });
   } );
 
+
 	function pauseSlide(){
 		pauseCarousel = true;
 		$("#pause").attr("class", "fa fa-play");

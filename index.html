@@ -1,4 +1,4 @@
-<doctype html>
+<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="UTF-8">
@@ -9,26 +9,38 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 </head>
-<body>
-	<div id="timeline" data-value="next"></div>
-	<div id="slideshow">
-			<span id="pause" class="fa fa-pause" data-value="pause"></span>
-		<p id="error-message">JS est désactivé</p>
-		<div id="rail">
-			<p id="internet-message">Veuillez vérifier votre connexion internet</p>
-			<span id="back" class="fa fa-chevron-left"></span>
-			<span id="next" class="fa fa-chevron-right"></span>
+
+	<body>
+
+		<div class="container">
+		<h1>Shildeshow</h1>
+		<div id="timeline" data-value="next"></div>
+		
+		<div id="slideshow">
+				<span id="pause" class="fa fa-pause" data-value="pause"></span>
+			<p id="error-message">JS est désactivé</p>
+			<div id="rail">
+				<p id="internet-message">Veuillez vérifier votre connexion internet</p>
+				<span id="back" class="fa fa-chevron-left"></span>
+				<span id="next" class="fa fa-chevron-right"></span>
+			</div>
 		</div>
-	</div>
-		<div id="title">
-		</div>
-		<div id="desc"></div>
+			<div id="title">
+			</div>
+			<div id="desc"></div>
 
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-	<script src="https://rawgit.com/jeresig/jquery.hotkeys/master/jquery.hotkeys.js"></script>
-	<script src="js/script.js"></script>
-	<script src="js/jquery.pause.min.js"></script>
-</body>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script src="https://rawgit.com/jeresig/jquery.hotkeys/master/jquery.hotkeys.js"></script>
+		<script src="js/script.js"></script>
+		<script src="js/jquery.pause.min.js"></script>
+		</div>
+		
+	</body>
+
+	<footer>
+		<h2>&copy;Copyright ASAT</h32>
+	</footer>
+
 </html>
