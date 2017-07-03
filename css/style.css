@@ -1,6 +1,6 @@
 html{
-	background:white;
-	
+	background-image: url('../images/wallpaper.jpg');
+	background-attachment:fixed;
 }
 
 h1,h2{
@@ -11,7 +11,6 @@ body, footer{
 
 	margin: 100px;
 	padding: 100px;
-	background:grey;
 }
 
 
@@ -20,13 +19,10 @@ body, footer{
 	float: left;
 }
 #title{
-
 	text-align: center;
 }
 #desc{
-
 	text-align: center;
-
 }
 #slideshow{
 	
@@ -35,7 +31,7 @@ body, footer{
     margin:auto;
   	padding:auto;
 	
-	border-radius: 5px 10px 0 5px ;
+	border-radius: 5px 5px 5px 5px ;
 }
 /*.image_title{
 	width: 300px;
@@ -85,4 +81,27 @@ p#internet-message{
 	bottom: 50%;
 	right: 0px;
 
+}
+
+#listeVignette{
+    margin:auto;
+	margin-top: 10px;
+	height: 40px;
+	text-align: center;
+}
+
+.vignette{
+	opacity: 0.4;
+   	margin-left:10px; 
+    display:inline-block;
+    vertical-align:top;
+
+	width: 60px;
+	height: 40px;
+	background: no-repeat center;
+  	background-size: cover;
+}
+
+.vignette.active{
+	opacity: 1;
 }
