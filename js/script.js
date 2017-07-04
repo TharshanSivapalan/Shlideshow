@@ -21,7 +21,7 @@
 	var h3_desc = "h3#desc";
 	var html_title = 'title';
 	var pauseCarousel = false;
-	var largeur = 600; // Largeur de l'image
+	var largeur = 800; // Largeur de l'image
 	var hauteur = 340; // Hauteur de l'image
 
 if($(p_error_message).hide()){
@@ -33,7 +33,7 @@ if($(p_error_message).hide()){
 		$(div_slideshow).css("width", largeur);
 		$(div_listeVignette).css('width', largeur);
 		$.each( json, function( key, val ) {
-			$(div_rail).append("<div class='" + div_image + "' id='img" + count + "' style='background-image: url(" + val.url + ");' data-title='" + val.title + "' data-desc='" + val.desc + "' ></div>");
+			$(div_rail).append("<div class='" + div_image + "' id='img" + count + "' style='width:" + largeur + "px; height:"+hauteur+"px; background-image: url(" + val.url + ");' data-title='" + val.title + "' data-desc='" + val.desc + "' ></div>");
 			$(div_listeVignette).append("<div class='" + div_vignette + "' id='img" + count + "' style='background-image:url("+val.url+");'></div>");
 			count++;
 		});
